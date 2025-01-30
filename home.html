@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="home.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-pro-key.js"></script>
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- Main Navigation -->
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <a href="#"><img src="https://dtkudil.wpenginepowered.com/wp-content/themes/kudil/images/light-logo.png" alt="KUDLI Logo"></a>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li class="dropdown-container">
+            <a href="#">Menu</a>
+            <div class="dropdown">
+                <div class="link">
+                    <a href="menuimage.html">Menu with Images</a>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="#">Reservation</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+    </div>
+</nav>
+
+<!-- Overlay Menu -->
+<div class="overlay-menu" id="overlayMenu">
+    <div class="close-icon" onclick="toggleMenu()">×</div>
+    <ul class="overlay-nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#" onclick="openSubMenuPage()">Menu</a></li>
+        <li><a href="#">Reservation</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+
+<!-- Sub-Menu Page -->
+<div class="sub-menu-page" id="subMenuPage">
+    <div class="back-icon" onclick="closeSubMenuPage()">← </div>
+    <ul class="sub-menu-links">
+        <li><a href="menuimage.html">Menu with Images</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</div>
+
+
+  <section class="hero">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active" style="background-image: url('hero1.jpg');">
+          <div class="carousel-caption">
+            <h1 style="font-size: 30px;">Taste the Difference</h1>
+            <h2 class="subheading" style="font-size: 55px;">Fine and Delicious Food</h2>
+            <div class="tagline">Since 1995</div>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item" style="background-image: url('hero2.jpg');">
+          <div class="carousel-caption">
+            <h1 style="font-size: 30px;">Experience the Grand Setting</h1>
+            <h2 class="subheading" style="font-size: 55px;">The Celebrated Cuisine of Our Master Chefs</h2>
+            <div class="tagline">Since 1995</div>
+          </div>
+        </div>
+        <!-- Third Slide -->
+        <div class="carousel-item" style="background-image: url('hero3.jpg');">
+          <div class="carousel-caption">
+            <h1 style="font-size: 30px;">Savor Every Bite</h1>
+            <h2 class="subheading" style="font-size: 55px;">Exquisite Flavors, Unforgettable Memories</h2>
+            <div class="tagline">Since 1995</div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls for carousel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-section">
+      <!-- Left Side Content -->
+      <div class="content-left">
+        <p class="text-center" style="font-size: 25px; font-family: cursive; color: rgb(151, 150, 150);">History of</p>
+        <h2 class="text-center mb-4" style="font-size: 35px; font-weight: 600; font-family: 'Lato', sans-serif;">Our
+          Restaurant</h2>
+
+        <div class="history-detail">
+          <p class="content-text" style="color: rgb(151, 150, 150);">
+            At Kudli, we take pride in our rich heritage. Established in 1995, our restaurant has been a cornerstone of culinary excellence, offering a blend of traditional flavors and modern techniques. Our journey began with a simple vision: to create a dining experience that feels like home, yet surprises with every bite. Over the years, we’ve grown into a beloved destination for food lovers, celebrated for our commitment to quality, authenticity, and warm hospitality.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <a href="#" class="btn btn-custom">Our Story</a>
+        </div>
+      </div>
+
+      <!-- Right Side Image -->
+      <div class="image-container"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-section">
+      <!-- Left Side Image (New Image) -->
+      <div class="image-container image-left"></div>
+
+      <!-- Right Side Content -->
+      <div class="content-right">
+        <p class="text-center" style="font-size: 25px; font-family: cursive; color: rgb(151, 150, 150);">Dedicated to</p>
+        <h2 class="text-center mb-4" style="font-size: 35px; font-weight: 600; font-family: 'Lato', sans-serif;">Our
+          Services</h2>
+
+        <div class="history-detail">
+          <p class="content-text" style="color: rgb(151, 150, 150);">
+            At Kudli, we go beyond just serving food. We create experiences. From intimate dinners to grand celebrations, our team is dedicated to making every moment special. Our services include personalized catering, private dining, and event planning. Whether it’s a family gathering or a corporate event, we ensure every detail is perfect, so you can focus on enjoying the occasion.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <a href="#" class="btn btn-custom">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="middle-with">
+    <div class="container">
+      <div class="image-container-middle">
+        <div class="content-middle">
+          <h2 class="text-center"
+            style="font-family: 'Lato', sans-serif; font-size: 60px; color: white; font-weight: 600;">Over 250 Delicious
+            & Tasty</h2>
+          <p class="text-center para-hover" style="font-family: cursive; font-size: 35px; ">Recipes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="height: 730px;">
+    <div class="container mt-6">
+      <!-- Centered Text Section -->
+      <div class="text-center my-5">
+        <p style="color: #6b6868; font-size: 20px; font-family: cursive;">For your comfort</p>
+        <h2 style="font-size: 30px; font-weight: 600;">Stunning Things</h2>
+      </div>
+
+      <!-- First Row of Boxes -->
+      <div class="row">
+        <!-- Box 1 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-utensils icon"></i>
+            <h5 class="box-heading">High Quality Foods</h5>
+            <p class="box-paragraph">We source only the finest ingredients to ensure every dish is a masterpiece.</p>
+          </div>
+        </div>
+        <!-- Box 2 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-wine-glass-alt icon"></i>
+            <h5 class="box-heading">Inspiring Recipes</h5>
+            <p class="box-paragraph">Our chefs draw inspiration from global cuisines to create unique and flavorful dishes.</p>
+          </div>
+        </div>
+        <!-- Box 3 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-apple-alt icon"></i>
+            <h5 class="box-heading">Salutary Meals</h5>
+            <p class="box-paragraph">Health and taste go hand in hand with our nutritious and delicious offerings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row of Boxes -->
+      <div class="row">
+        <!-- Box 4 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-fish icon"></i>
+            <h5 class="box-heading">Veteran Staff</h5>
+            <p class="box-paragraph">Our experienced team is dedicated to providing exceptional service.</p>
+          </div>
+        </div>
+        <!-- Box 5 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-drumstick-bite icon"></i>
+            <h5 class="box-heading">Pristine Ingredients</h5>
+            <p class="box-paragraph">Fresh, organic, and sustainably sourced ingredients are the heart of our kitchen.</p>
+          </div>
+        </div>
+        <!-- Box 6 -->
+        <div class="col-md-4">
+          <div class="box-block">
+            <div class="diagonal-border"></div>
+            <i class="fas fa-blender icon"></i>
+            <h5 class="box-heading">Express Delivery</h5>
+            <p class="box-paragraph">Enjoy your favorite meals at home with our fast and reliable delivery service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="reser-home-background">
+      <div class="reser-home-content">
+        <h1 class="reser-home-heading">Enjoy with Family and Friends</h1>
+        <h1 class="reser-home-discount">25% Discount</h1>
+        <p class="reser-home-description">for Family Parties! Coupon 015</p>
+        <a href="#reservation" class="reser-home-reservation">Make a Reservation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="re-fr food-section py-5">
+    <div class="re-fr container">
+      <div class="row align-items-center">
+        <!-- Left Side (3 Items) -->
+        <div class="col-md-3 re-fr content">
+          <div class="re-fr food-item text-center mb-4">
+            <i class="rt-ico lt-ico fas fa-bread-slice slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Salubrious Snacks</h3>
+            <p class="re-fr description">Start your meal with our healthy and delicious snacks, perfect for any time of day.</p>
+          </div>
+          <div class="re-fr food-item text-center mb-4">
+            <i class="rt-ico lt-ico fas fa-beer slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Healthy Drinks</h3>
+            <p class="re-fr description">Quench your thirst with our refreshing and nutritious beverages.</p>
+          </div>
+          <div class="re-fr food-item text-center">
+            <i class="rt-ico lt-ico fas fa-coffee slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Chocolate Desserts</h3>
+            <p class="re-fr description">Indulge in our decadent chocolate creations, a treat for your sweet tooth.</p>
+          </div>
+        </div>
+
+        <!-- Center Chef Image -->
+        <div class="col-md-6 re-fr chef text-center">
+          <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2018/09/center-img2.jpg" alt="Chef Image" class="img-fluid">
+        </div>
+
+        <!-- Right Side (3 Items) -->
+        <div class="col-md-3 re-fr content">
+          <div class="re-fr food-item text-center mb-4">
+            <i class="rt-ico fas fa-wine-glass slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Hot Spirits</h3>
+            <p class="re-fr description">Warm up with our selection of premium spirits and cocktails.</p>
+          </div>
+          <div class="re-fr food-item text-center mb-4">
+            <i class="rt-ico fas fa-box slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Packaged Foods</h3>
+            <p class="re-fr description">Take home the taste of Kudli with our specially packaged meals.</p>
+          </div>
+          <div class="re-fr food-item text-center">
+            <i class="rt-ico fas fa-drumstick-bite slice-icon" style="font-size: 40px;"></i>
+            <h3 class="re-fr title">Spicy Stuff</h3>
+            <p class="re-fr description">For those who love a kick, our spicy dishes are sure to delight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="be-pi-container">
+    <div class="container-fluid be-pi">
+      <div class="row">
+        <div class="col-md-4 content-section be-pi">
+          <div class="be-pi-head">
+            <h5 class="text-center" style="font-family: cursive; color: rgb(160, 158, 158);">Embracing</h5>
+            <h1 class="text-center" style="font-size: 30px; font-weight: 700;">Seasonal Menus</h1>
+          </div>
+          <p class="text-center" style="color: rgb(160, 158, 158)">
+            At Kudli, we celebrate the changing seasons with menus that highlight the freshest ingredients of the moment. From summer salads to winter stews, our seasonal offerings are designed to bring you the best flavors of the year.
+          </p>
+          <div class="text-center">
+            <button class="btn btn-custom">Shop Now</button>
+          </div>
+        </div>
+
+        <!-- Right section (Images) -->
+        <div class="col-md-8 be-pi">
+          <div class="img-container row">
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery1-640x480.jpg" alt="Image 1">
+              <div class="plus-sign"></div>
+            </div>
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery2-640x480.jpg" alt="Image 2">
+              <div class="plus-sign"></div>
+            </div>
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery3-640x480.jpg" alt="Image 3">
+              <div class="plus-sign"></div>
+            </div>
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery4-640x480.jpg" alt="Image 4">
+              <div class="plus-sign"></div>
+            </div>
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery5-640x480.jpg" alt="Image 5">
+              <div class="plus-sign"></div>
+            </div>
+            <div class="col-4 p-0">
+              <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2014/01/gallery6-640x480.jpg" alt="Image 6">
+              <div class="plus-sign"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="team-sec-head">
+      <h2 style="color: #6b6868; font-family: cursive;">Talent and Experience</h2>
+      <h3 style="font-weight: 600;">Team Members</h3>
+    </div>
+    <div class="team-sec-container">
+      <!-- First Chef Profile -->
+      <div class="team-sec-profile-card">
+        <div class="team-sec-image">
+          <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2018/08/team1.jpg" alt="Marc Coppolo">
+          <div class="team-sec-overlay">
+            <h3>Marc Coppolo</h3>
+            <p>Head Of Chef</p>
+            <div class="team-sec-social-icons">
+              <a href="#"><i class="fab fa-facebook" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-twitter" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-linkedin" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fa-brands fa-google-plus-g" style="color: #ededed;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Chef Profile -->
+      <div class="team-sec-profile-card">
+        <div class="team-sec-image">
+          <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2018/08/team2.jpg" alt="John Doe">
+          <div class="team-sec-overlay">
+            <h3>John Doe</h3>
+            <p>Executive Chef</p>
+            <div class="team-sec-social-icons">
+              <a href="#"><i class="fab fa-facebook" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-twitter" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-linkedin" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fa-brands fa-google-plus-g" style="color: #ededed;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Chef Profile -->
+      <div class="team-sec-profile-card">
+        <div class="team-sec-image">
+          <img src="https://dtkudil.wpenginepowered.com/wp-content/uploads/2018/08/team3.jpg" alt="Michael Smith">
+          <div class="team-sec-overlay">
+            <h3>Michael Smith</h3>
+            <p>Pastry Chef</p>
+            <div class="team-sec-social-icons">
+              <a href="#"><i class="fab fa-facebook" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-twitter" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fab fa-linkedin" style="color: #ededed;"></i></a>
+              <a href="#"><i class="fa-brands fa-google-plus-g" style="color: #ededed;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="la-se-reser-home-background">
+      <div class="la-se-reser-home-content">
+        <h1 class="la-se-reser-home-heading">Need a Quality & Taste Improvement?</h1>
+        <h3 class="la-se-reser-home-newsletter">Signup with Newsletter</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29942.29907705611!2d73.06743307719968!3d33.569104445696844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1737470670752!5m2!1sen!2s"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <footer class="ft">
+    <div class="main">
+      <div class="fi">
+        <!-- Left Section: Follow Us and Icons -->
+        <div class="follow-us">
+          <p>Follow Us:</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+        </div>
+
+        <!-- Center Section: Logo -->
+        <div class="logo">
+          <a href="#"><img src="https://dtkudil.wpenginepowered.com/wp-content/themes/kudil/images/light-logo.png"
+              alt="KUDLI Logo"></a>
+        </div>
+
+        <!-- Right Section: Email Input -->
+        <div class="email-input">
+          <input type="email" placeholder="Enter your email">
+        </div>
+      </div>
+
+      <!-- Line from Follow Us to Email Input -->
+      <div class="line"></div>
+
+      <!-- Additional sections (se and th divs) -->
+      <div class="se">
+        <div class="address">
+          <h5 style="font-size: 25px;">Address</h5><br>
+          <p style="color: #6b6868;">Islamabad</p><br>
+          <p style="color: #6b6868;">Pakistan</p>
+        </div>
+        <div class="line2"></div>
+        <div class="timming">
+          <h5 id="openning">Opening Timings</h5><br>
+          <p style="color: rgb(210, 179, 96);">Monday-Friday</p><br>
+          <p style="font-size: 12px;">7am - 10pm</p><br>
+          <p style="font-size: 12px;">(Breakfast, Lunch, Dinner)</p>
+        </div>
+        <div class="line3"></div>
+        <div class="contact">
+          <h5 style="font-size: 20px;">Contact Us</h5><br>
+          <p>aneebkashif@gmail.com</p><br>
+          <p style="color: #6b6868;">+92 3123428443</p>
+        </div>
+      </div>
+      <div class="th">
+        <div class="th-con">
+          <p>Created By KUDLI 2025 | </p>
+          <i class="fa-regular fa-copyright"></i>
+          <p> All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script src="home.js"></script> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
